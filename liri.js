@@ -1,5 +1,7 @@
-var require = require("dotenv").config();
-var keys = require("./keys");
+require = require("dotenv").config();
+
+
+var keys = require("./keys.js");
 var request = require("request");
 var movieName = process.argv[2];
 var spotify = require("spotify");
@@ -34,7 +36,7 @@ break;
           
    
 function movies(input) {
-            var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "tt3896198&apikey=a11df5aa";
+            var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "tt3896198&apikey=trilogy";
             console.log(queryUrl);
             request(queryUrl, function(error, response, body) {
                 if(!error && response.statusCode ===200) {
